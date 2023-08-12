@@ -1,0 +1,40 @@
+import pandas as pd
+import numpy as py
+from datetime import datetime
+
+data = pd.read_csv("C:/Users/dinki/1161/DataProject/tmdb_5000_movies.csv/tmdb_5000_movies.csv")
+
+title = data["original_title"].tolist()
+release_date = data["release_date"].tolist()
+number_of_reviewers = data["vote_count"].tolist()
+average_review = data["vote_average"].tolist()
+
+title_words = data["original_title"].str.split().str.len()
+# This shows how many words are in each movie title.
+
+
+movie_data = pd.DataFrame({"release_date": release_date, "average_review":average_review, "title": title, "number_of_reviewers":number_of_reviewers, "title_words":title_words})
+movie_data['release_date'] = movie_data['release_date'].astype('datetime64[ns]')
+
+
+movie_data_no_colons = movie_data[movie_data["title"].str.contains(":") == False]
+movie_data_no_colons = movie_data_no_colons.set_index(movie_data_no_colons["release_date"])
+movie_data_no_colons = movie_data_no_colons.sort_index()
+# This was an attempt to weed out movies that have the series they are a part of in their title. (E.g. - Star Wars Episode 1: The Phantom Menace) Titles like these have a lot of words, and I didn't want them to be included in my plot of movie name length over time. Not ideal though, as these movies are really popular these days...
+
+Pre1980 = movie_data_no_colons["1916-09-04 00:00:00":"1980-12-04 00:00:00"]
+Post1980 = movie_data_no_colons["1980-12-04 00:00:00":]
+# This splits my data frame into before and after 1980
+
+movie_data.plot.scatter(x="release_date", y="title_words")
+movie_data_no_colons.plot.scatter(x="release_date", y="title_words")
+# Just wanted to see how much of a difference this would make.
+
+movie_data.plot.scatter(x="release_date", y="average_review")
+movie_data.plot.scatter(x="release_date", y="number_of_reviewers")
+movie_data.plot.scatter(x="release_date", y="average_review")
+
+Pre1980.hist("title_words")
+Post1980.hist("title_words")
+# This tested my theory that movie titles have gotten shorter over time, but I didn't really get my desired result.
+

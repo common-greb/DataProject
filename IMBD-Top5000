@@ -1,8 +1,0 @@
-import pandas as pd
-
-# Load the dataset into a DataFrame
-data = pd.read_csv("C:/Users/dinki/1161/DataProject/tmdb_5000_movies.csv/tmdb_5000_movies.csv")
-
-# Display the first few rows of the dataset
-print(data.head())
-
