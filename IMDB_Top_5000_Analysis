@@ -1,3 +1,5 @@
+# I wrote this code in Spyder, at the recommendation of my brother who works in data science. I found I really like the interface, and I really appreciate being able to see my variables easily. And the visualisations were really nice.
+
 import pandas as pd
 import numpy as py
 from datetime import datetime
@@ -33,8 +35,10 @@ movie_data_no_colons.plot.scatter(x="release_date", y="title_words")
 movie_data.plot.scatter(x="release_date", y="average_review")
 movie_data.plot.scatter(x="release_date", y="number_of_reviewers")
 movie_data.plot.scatter(x="release_date", y="average_review")
+movie_data.plot.scatter(x="number_of_reviewers", y="average_review")
 
 Pre1980.hist("title_words")
 Post1980.hist("title_words")
 # This tested my theory that movie titles have gotten shorter over time, but I didn't really get my desired result.
 
+# A quick reflection on the project can be found in the README.md file
