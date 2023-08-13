@@ -39,6 +39,7 @@ movie_data.plot.scatter(x="number_of_reviewers", y="average_review")
 
 Pre1980.hist("title_words")
 Post1980.hist("title_words")
+
 # This tested my theory that movie titles have gotten shorter over time, but I didn't really get my desired result.
 
 # A quick reflection on the project can be found in the README.md file
