@@ -5,4 +5,4 @@ This was a bit of fun, which is annoying. I really wanted to hate this assignmen
 
 With a little bit of help, this really wasn't so hard. I absolutely understand all the code I wrote, and I see the value that simple coding and data analysis could bring to my design degree and career. Good stuff.
 
-What made this really interesting was my topic. Oh, how horrible this assignment would have been if I had to analyse financial dreck. I love movies, I love learning about movies, so naturally this was pretty cool. And I love doing fun presentations, so that was really the best part. I think smart graphs and visual aids can really bring an interesting presentation to the next level. Make it not just fun, but a bit informative.
+What made this really interesting was my topic. Oh, how horrible this assignment would have been if I had to analyze financial dreck. I love movies, I love learning about movies, so naturally this was pretty cool. And I love doing fun presentations, so that was really the best part. I think smart graphs and visual aids can really bring an interesting presentation to the next level. Make it not just fun, but a bit informative.
