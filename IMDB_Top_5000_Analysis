@@ -31,7 +31,6 @@ movie_data_no_colons.plot.scatter(x="release_date", y="title_words")
 
 movie_data.plot.scatter(x="release_date", y="average_review")
 movie_data.plot.scatter(x="release_date", y="number_of_reviewers")
-movie_data.plot.scatter(x="release_date", y="average_review")
 movie_data.plot.scatter(x="number_of_reviewers", y="average_review")
 # A bunch of plots
 
