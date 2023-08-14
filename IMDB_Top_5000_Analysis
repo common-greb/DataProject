@@ -8,6 +8,7 @@ title = data["original_title"].tolist()
 release_date = data["release_date"].tolist()
 number_of_reviewers = data["vote_count"].tolist()
 average_review = data["vote_average"].tolist()
+# Defining Variables
 
 title_words = data["original_title"].str.split().str.len()
 # This shows how many words are in each movie title.
@@ -15,8 +16,6 @@ title_words = data["original_title"].str.split().str.len()
 
 movie_data = pd.DataFrame({"release_date": release_date, "average_review":average_review, "title": title, "number_of_reviewers":number_of_reviewers, "title_words":title_words})
 movie_data['release_date'] = movie_data['release_date'].astype('datetime64[ns]')
-
-
 movie_data_no_colons = movie_data[movie_data["title"].str.contains(":") == False]
 movie_data_no_colons = movie_data_no_colons.set_index(movie_data_no_colons["release_date"])
 movie_data_no_colons = movie_data_no_colons.sort_index()
@@ -38,4 +37,4 @@ movie_data.plot.scatter(x="number_of_reviewers", y="average_review")
 
 Pre1980.hist("title_words")
 Post1980.hist("title_words")
-# This tested my theory that movie titles have gotten shorter over time, but I didn't really get my desired result.
+# This tested my theory that movie titles have gotten shorter over time, but I didn't really get my desired result. Still interesting none the less.
